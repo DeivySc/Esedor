@@ -9,6 +9,11 @@ export class ProjectComponent implements OnInit {
 
   constructor() { }
 
+  starproject_1 = true;
+  starproject_2 = false;
+  starproject_3 = false;
+  starproject_4 = false;
+
   ngOnInit(): void {
   }
 
