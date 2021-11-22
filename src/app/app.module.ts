@@ -15,6 +15,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatListModule} from "@angular/material/list";
     LandingComponent,
     ContactComponent,
     ProjectComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
