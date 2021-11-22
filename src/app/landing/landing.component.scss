@@ -1,0 +1,35 @@
+.background{
+  /* Black */
+  background: #000000;
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+.float{
+  position:fixed;
+  left:60px;
+}
+
+.wrapper{
+  width: 85%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position:relative;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: #222DE9;
+  border-radius: 5px;
+}
+
+input, select, textarea{
+  color: #ffffff;
+}
+
+textarea:focus, input:focus {
+  color: #ffffff;
+}
