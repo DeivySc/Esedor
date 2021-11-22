@@ -72,6 +72,26 @@
   </div>
 </div>
 
+<div id="services" class="px-24 bg-[#141C26] h-[122.375rem] flex flex-wrap content-center text-white">
+  <div>
+    <div class="flex inline-flex items-center space-x-10">
+      <mat-icon>call_made</mat-icon>
+      <h3 class="lexend text-[1.563rem]" >Servicios</h3>
+    </div>
+
+    <div class="space-y-28 mt-10">
+      <div class="border-l-2 pl-10" *ngFor="let service of dataService">
+        <div class="w-[62.063rem]">
+          <span class="text-[3.063rem] LexendZetta" style="line-height: 61px;">{{service.title}}</span>
+        </div>
+        <div class="mb-4 mt-2 2xl:mt-4 w-[23.563rem]">
+          <span class="text-[1rem] lexend" style="letter-spacing: 0.005em;line-height: 17px;">{{service.description}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="blogweek" class="flex flex-wrap content-center h-full px-24 bg-[#000000]">
   <div class="flex justify-between text-white w-full">
     <div>
