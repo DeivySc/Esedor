@@ -28,7 +28,7 @@
 <div id="inicio" class="flex h-full background flex-wrap content-center">
   <div class="LexendZetta lg:mt-6 text-[#D8D8D8] text-[6rem] 2xl:text-[9rem] 3xl:text-[12rem] w-full">
     <div class="text-left">
-      <span>{{actualprimero}}</span>
+      <span [class.fonttext]="animation">{{actualprimero}}</span>
     </div>
     <div class="w-full 2xl:my-6">
       <div class="flex justify-center flex-wrap content-center">
@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="text-right mt-[16rem] 3xl:mt-[18rem]">
-      <span>{{actualsegundo}}</span>
+      <span [class.fonttext]="animation">{{actualsegundo}}</span>
     </div>
     <div (click)="scrollFn('empresas')" class="flex cursor-pointer float bottom-[2.5rem] 2xl:bottom-[6.5rem] ml-10 justify-center flex-wrap content-center rounded-full border w-[3.063rem] h-[3.063rem] 3xl:w-[5.063rem] 3xl:h-[5.063rem]">
       <svg class="animate-bounce w-[2.063rem] h-[2.063rem] 3xl:w-[3.063rem] 3xl:h-[3.063rem]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">

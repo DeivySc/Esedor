@@ -37,6 +37,7 @@ $template-theme: mat.define-light-theme((
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 html, body { height: 100%; }

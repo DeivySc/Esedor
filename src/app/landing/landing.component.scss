@@ -58,3 +58,34 @@ textarea:focus, input:focus {
   -o-transition: all .2s;
   transition: all .2s;
 }
+
+
+/*Text animation*/
+.fonttext {
+  animation: move 3s;
+  -webkit-animation: move 3s;
+}
+
+@keyframes move {
+  from {
+    margin-left: 100%;
+    /*width: 300%;*/
+  }
+
+  to {
+    margin-left: 0%;
+    /*width: 100%;*/
+  }
+}
+
+@-webkit-keyframes move {
+  from {
+    margin-left: 100%;
+    /*width: 300%;*/
+  }
+
+  to {
+    margin-left: 0%;
+    /*width: 100%;*/
+  }
+}

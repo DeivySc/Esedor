@@ -42,6 +42,7 @@ export class LandingComponent implements OnInit {
   starproject_3 = false;
   starproject_4 = false;
 
+  animation = true;
   constructor(private _vps: ViewportScroller) { }
 
   scrollFn(anchor: string): void{
@@ -58,17 +59,28 @@ export class LandingComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-    this.actualprimero = this.titulos[0].title1;
-    this.actualsegundo = this.titulos[0].title2;
+  textosfuntiostitle() {
     setInterval(() => {
       this.changeCounter++;
+
       if (this.changeCounter > this.titulos.length -1) {
         this.changeCounter = 0;
       }
       this.actualprimero = this.titulos[this.changeCounter].title1;
       this.actualsegundo = this.titulos[this.changeCounter].title2;
     }, 5000);
+  }
+
+  ngOnInit(): void {
+    this.actualprimero = this.titulos[0].title1;
+    this.actualsegundo = this.titulos[0].title2;
+
+    this.textosfuntiostitle();
+
+    setInterval(() => {
+      this.animation = !this.animation;
+    }, 2500);
+
   }
 
 }
