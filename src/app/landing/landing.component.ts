@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {ViewportScroller} from "@angular/common";
 
 @Component({
@@ -46,6 +46,16 @@ export class LandingComponent implements OnInit {
 
   scrollFn(anchor: string): void{
     this._vps.scrollToAnchor(anchor)
+  }
+
+  header_variable=false;
+  @HostListener("document:scroll")
+  scrollFuntion(){
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0){
+      this.header_variable = true;
+    }else {
+      this.header_variable = false;
+    }
   }
 
   ngOnInit(): void {
