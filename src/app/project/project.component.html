@@ -1,13 +1,16 @@
-<mat-toolbar class="main-header bg-transparent">
+<mat-toolbar class="main-header text-[#D8D8D8] -mt-6 bg-transparent">
   <div class="flex justify-between w-full text-[0.875rem] 3xl:text-[1.875rem]">
-    <div>
-      <span>Esedor</span>
+    <div class="flex">
+      <div>
+        <img class="w-[2.313] h-[2rem]" src="assets/img/logo.svg">
+      </div>
+      <span [class.header_variable]="header_variable" style="line-height: 22px;" class="-ml-16 text-[1.125rem] lexend">Esedor</span>
     </div>
     <div class="flex space-x-10">
-      <div class="space-x-10">
-        <span class="cursor-pointer">Proyectos</span>
+      <div [class.header_variable]="header_variable" class="space-x-10">
+        <span  class="cursor-pointer">Proyectos</span>
         <span>Nosotros</span>
-        <span>Contacto</span>
+        <span>Contacto2</span>
       </div>
       <div>
         <svg class="cursor-pointer" width="42" height="22" viewBox="0 0 42 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,7 +24,7 @@
   </div>
 </mat-toolbar>
 
-<mat-drawer-container class="w-full min-h-full px-24 bg-white">
+<mat-drawer-container class="w-full mt-20 min-h-full px-24 bg-white">
   <mat-drawer mode="side" class="w-[250px] flex justify-end" opened>
     <div class="border-l border-black">
       <mat-list role="list" class="mt-20 ml-6 lexend text-[0.875rem]">

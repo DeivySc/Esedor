@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -12,6 +12,16 @@ export class ToolbarComponent implements OnInit {
 
   public redirectProject() {
     this.router.navigateByUrl('/proyectos');
+  }
+
+  header_variable=false;
+  @HostListener("document:scroll")
+  scrollFuntion(){
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0){
+      this.header_variable = true;
+    }else {
+      this.header_variable = false;
+    }
   }
 
   ngOnInit(): void {

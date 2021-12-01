@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-project',
@@ -24,6 +24,16 @@ export class ProjectComponent implements OnInit {
     }else {
       this.filtrado = this.empresas.filter(empresa => empresa.tipo === value);
       console.log(this.filtrado);
+    }
+  }
+
+  header_variable=false;
+  @HostListener("document:scroll")
+  scrollFuntion(){
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0){
+      this.header_variable = true;
+    }else {
+      this.header_variable = false;
     }
   }
 
