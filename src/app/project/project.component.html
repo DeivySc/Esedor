@@ -21,16 +21,16 @@
   </div>
 </mat-toolbar>
 
-<mat-drawer-container class="w-full px-24 bg-white">
+<mat-drawer-container class="w-full min-h-full px-24 bg-white">
   <mat-drawer mode="side" class="w-[250px] flex justify-end" opened>
     <div class="border-l border-black">
       <mat-list role="list" class="mt-20 ml-6 lexend text-[0.875rem]">
-        <mat-list-item role="listitem">Todos</mat-list-item>
-        <mat-list-item role="listitem">Banca</mat-list-item>
-        <mat-list-item role="listitem">Educación</mat-list-item>
-        <mat-list-item role="listitem">Salud</mat-list-item>
-        <mat-list-item role="listitem">Automotriz</mat-list-item>
-        <mat-list-item role="listitem">Ecommerce</mat-list-item>
+        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('todos')">Todos</mat-list-item>
+        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('banca')">Banca</mat-list-item>
+        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('educacion')">Educación</mat-list-item>
+        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('salud')">Salud</mat-list-item>
+        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('automotriz')">Automotriz</mat-list-item>
+        <mat-list-item class="cursor-pointer" role="listitem" (click)="filterEmpresas('ecomerce')">Ecommerce</mat-list-item>
       </mat-list>
     </div>
   </mat-drawer>
@@ -43,7 +43,7 @@
       </h2>
 
       <div class="grid grid-cols-2 gap-10 my-16">
-        <div *ngFor="let emp of empresas">
+        <div *ngFor="let emp of filtrado">
           <img alt="{{emp.alt}}" src="{{emp.img}}">
           <span class="text-[1.125rem]">{{emp.descripcion}}</span>
           <h4 class="text-[1.313rem] lexend">{{emp.name}}</h4>
